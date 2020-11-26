@@ -10,7 +10,3 @@ A web application build using MERN stack to help developer share there knowledge
 - redux - state management
 - JWT - Authentication
 - Heroku - deployment
-
-## live project
-
-click here - https://infinite-inlet-34646.herokuapp.com/

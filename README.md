@@ -1,4 +1,4 @@
-# BLOGO Project
+# Blogging Project
 
 A web application build using MERN stack to help developer share there knowledge using blog post.
 

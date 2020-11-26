@@ -1,0 +1,478 @@
+:root {
+  --navbar-color: #1a1a1d;
+  --color-light: #4e4e50;
+  --link-color: #c3073f;
+  --light-red: #950740;
+  --dark-red: #6f2232;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+/* links  */
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.author {
+  color: var(--link-color);
+
+  font-weight: 500;
+}
+
+/* alerts */
+.alert {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  border: 1px solid #3335;
+  font-size: 0.7rem;
+  border-radius: 20px 20px 1px 20px;
+}
+
+.alt-dng {
+  background-color: var(--link-color);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.alt-succ {
+  background-color: #037a03;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+/* spinner */
+.Spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+/* buttons */
+button {
+  cursor: pointer;
+  outline: none;
+}
+button:focus {
+  outline: none;
+  box-shadow: 2px 2px 3px var(--navbar-color);
+}
+button:hover {
+  filter: brightness(90%);
+}
+button.active {
+  filter: brightness(90%);
+}
+.btn-mid {
+  padding: 3px 15px;
+  border: 2px solid var(--light-red);
+  color: var(--light-red);
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 5px;
+  filter: brightness(150%);
+}
+.btn-lg {
+  padding: 7px 20px;
+  border: none;
+  color: #eee;
+  background: linear-gradient(to right, var(--light-red), var(--dark-red));
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px var(--navbar-color);
+}
+/* 404 page */
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+}
+
+.page-404 h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+}
+.page-404 a {
+  font-weight: 600;
+}
+
+/* form styling */
+.form {
+  margin-top: 5%;
+  min-height: 430px;
+  height: 430px;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 35%;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px var(--navbar-color);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+form input {
+  border-radius: 10px;
+  border: 1px solid #4e4e5077;
+  height: 35px;
+  padding: 0 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #4e4e50ee;
+}
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0 5px #4e4e5055;
+  outline: none;
+}
+
+/* navbar styling */
+.navbar {
+  padding: 10px 10%;
+  background-color: var(--navbar-color);
+  color: #eee;
+  height: 10vh;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #eee;
+}
+
+.navbar .buttons button {
+  margin: 0 10px;
+}
+
+.navbar .mob-nav {
+  display: none;
+}
+.navbar .mob-nav button {
+  margin: 0 5px;
+}
+
+/* landing page */
+.landing {
+  background-color: var(--color-light);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.landing h1 {
+  color: #ddd;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.landing p {
+  color: #ddda;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* login form */
+.auth {
+  background: linear-gradient(var(--link-color), var(--dark-red));
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.auth .form h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.auth .form button {
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.home {
+  margin: 20px 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home h5 {
+  padding-bottom: 5px;
+  border-bottom: 2px dashed var(--link-color);
+  width: 210px;
+}
+
+.post {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100%;
+  gap: 5%;
+}
+
+.post-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  min-height: 300px;
+  row-gap: 0%;
+}
+.post-card .image {
+  height: 170px;
+}
+.post-card .image img {
+  width: 100%;
+  height: 100%;
+}
+.post-card .post-info h2:hover {
+  color: #007bff;
+}
+.post-card .post-info .h-mid {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: black;
+}
+.post-card .post-info .h-sm {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+  margin-top: 20px;
+}
+.post-card .post-info p {
+  color: #555;
+  font-size: 0.9rem;
+}
+.post-card .post-info .author-data {
+  display: flex;
+  align-items: center;
+}
+.post-card .post-info .author-data img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.post-card .post-info .author-data .author h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--light-red);
+}
+.post-card .post-info .author-data .author p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* single post */
+.single-post {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.single-post .data {
+  width: 60%;
+  margin-top: 20px;
+}
+.single-post .data h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.single-post .data img {
+  width: 100%;
+  max-height: 400px;
+  margin: 10px 0;
+}
+
+.single-post .data .info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.single-post .data .info p {
+  margin: 0;
+  color: #4e4e50;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.single-post .data .text p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #111d;
+  margin-bottom: 30px;
+}
+
+.single-post .data hr {
+  background-color: #5555;
+  height: 1px;
+}
+.single-post .data .author-control {
+  margin-bottom: 20px;
+}
+.single-post .data .author-control button {
+  margin: 0 10px;
+}
+
+/* createpost */
+
+.createPost {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.createPost .form {
+  box-shadow: none;
+  border: 1px solid #4e4e5077;
+  border-radius: 5px;
+  min-width: 80%;
+  height: 560px;
+  background-color: rgba(204, 221, 228, 0.4);
+  padding: 50px;
+}
+
+.createPost form textarea {
+  min-width: 100%;
+  min-height: 50%;
+  border: 1px solid #4e4e5077;
+  border-radius: 10px;
+  padding: 10px;
+  color: #4e4e50ee;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1160px) {
+  .btn-mid {
+    padding: 2px 10px;
+    font-size: 0.9rem;
+  }
+  .btn-lg {
+    padding: 5px 18px;
+    font-size: 1.1rem;
+  }
+
+  .post {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form {
+    width: 50%;
+  }
+  .createPost .form form input,
+  .createPost .form form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 8%;
+  }
+  .navbar a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #eee;
+  }
+  .navbar .buttons {
+    display: none;
+  }
+  .navbar .mob-nav {
+    display: inline;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .landing h1 {
+    font-size: 2rem;
+  }
+
+  .landing p {
+    font-size: 0.9rem;
+  }
+
+  .home h5 {
+    padding-bottom: 5px;
+    border-bottom: 2px dashed var(--link-color);
+    width: 180px;
+    font-size: 1rem;
+  }
+  .post {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .post-card .post-info .h-mid {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+  }
+
+  .single-post .data {
+    width: 90%;
+  }
+  .single-post .data h1 {
+    font-size: 1.8rem;
+  }
+  .single-post .data img {
+    max-height: 200px;
+  }
+
+  .single-post .data .text p {
+    line-height: 1.7rem;
+    font-size: 1rem;
+  }
+
+  .createPost {
+    margin-top: 0;
+  }
+  .createPost .form {
+    width: 90%;
+    height: 50%;
+  }
+  .createPost .form h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .createPost .form form {
+    min-width: 120%;
+  }
+  .createPost .form form input,
+  .createPost .form form textarea {
+    font-size: 0.7rem;
+  }
+}
